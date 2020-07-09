@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relative_register"
+    tools:context=".Register">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tlbr"
+        android:elevation="5dp"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_height="wrap_content"/>
+
+    <RadioGroup
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:orientation="horizontal"
+        android:id="@+id/rg_mode"
+        android:layout_below="@id/tlbr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:tag="d"
+            android:id="@+id/rb_dark"
+            android:textSize="15dp"
+            android:text="Dark Mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Space
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+        <RadioButton
+            android:tag="l"
+            android:checked="true"
+            android:id="@+id/rb_light"
+            android:text="Light Mode"
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/register_pic"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/rg_mode"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/register"/>
+
+    <LinearLayout
+        android:layout_below="@id/register_pic"
+        android:id="@+id/form_fields"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+        android:text="Username"
+        android:textSize="15dp"
+            android:textColor="@android:color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+        <EditText
+            android:drawableLeft="@drawable/ic_baseline_portrait_24"
+            android:inputType="text"
+            android:id="@+id/edt_username"
+            android:hint=" Create a username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="4dp"/>
+        <TextView
+            android:textSize="15dp"
+            android:textColor="@android:color/black"
+            android:text="E-mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:drawableLeft="@drawable/email"
+            android:inputType="textWebEmailAddress"
+            android:id="@+id/edt_email"
+            android:hint=" Enter Your E-mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="4dp"/>
+        <TextView
+            android:text="Password"
+            android:textSize="15dp"
+            android:textColor="@android:color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:drawableLeft="@drawable/pass"
+            android:inputType="textPassword"
+            android:id="@+id/edt_password"
+            android:hint=" Create a Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="4dp"/>
+        <TextView
+            android:textSize="15dp"
+            android:textColor="@android:color/black"
+            android:text="Phone No."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:drawableLeft="@drawable/phone"
+            android:id="@+id/edt_phone_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=" Enter Your phone No"
+            android:inputType="phone" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="4dp"/>
+        <TextView
+            android:textSize="15dp"
+            android:textColor="@android:color/black"
+            android:text="Select Your Skills"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:id="@+id/cb_android"
+                android:text="Android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+                android:id="@+id/cb_python"
+                android:text="Python"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+                android:id="@+id/cb_angular"
+                android:text="Angular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+                android:id="@+id/cb_react"
+                android:text="React"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="4dp"/>
+        <TextView
+            android:textSize="15dp"
+            android:textColor="@android:color/black"
+            android:text="Gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <RadioGroup
+            android:id="@+id/rg_gender"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:text="Male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <RadioButton
+                android:text="Female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RadioGroup>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/register_btn"
+        android:layout_marginTop="20dp"
+        android:text="Register"
+        android:textSize="15dp"
+        android:padding="15dp"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/form_fields"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/register_btn"
+        android:id="@+id/btn"
+        android:layout_centerHorizontal="true"
+        android:text="open website"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/btn"
+        android:id="@+id/call"
+        android:layout_centerHorizontal="true"
+        android:text="call"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

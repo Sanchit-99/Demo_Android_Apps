@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/lnr_hrz"
+        android:title="Linear Horizontal"/>
+
+    <item android:id="@+id/lnr_vrt"
+        android:title="Linear Vertical"/>
+
+    <item android:id="@+id/grid"
+        android:title="Grid"/>
+
+</menu>

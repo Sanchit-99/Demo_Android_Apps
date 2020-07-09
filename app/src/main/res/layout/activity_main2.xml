@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/login_bg"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tlbr"
+        android:elevation="5dp"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/banner"
+        android:layout_marginTop="100dp"
+        android:textSize="25dp"
+        android:layout_centerHorizontal="true"
+        android:text="Relative Layout Login Page"
+        android:textColor="@android:color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/user_icon"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/user_new"
+        android:layout_below="@id/banner"
+        android:layout_width="70dp"
+        android:layout_height="70dp"/>
+    <TextView
+        android:id="@+id/usename"
+        android:layout_below="@id/user_icon"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:text="Username"
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:textColor="@android:color/black"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:layout_toRightOf="@id/usename"
+        android:id="@+id/edt_id_relative"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/user_icon"
+        android:hint="Enter Username"
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/password"
+        android:layout_below="@id/usename"
+        android:layout_marginTop="35dp"
+        android:layout_width="wrap_content"
+        android:text="Password"
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:textColor="@android:color/black"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:layout_toRightOf="@id/usename"
+        android:id="@+id/edt_pass_relative"
+        android:layout_marginTop="35dp"
+        android:inputType="textPassword"
+        android:layout_below="@id/edt_id_relative"
+        android:hint="Enter Password"
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_login_relative"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/edt_pass_relative"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:textSize="20dp"
+        android:elevation="5dp"
+        android:paddingLeft="40dp"
+        android:textColor="@android:color/white"
+        android:paddingRight="40dp"
+        android:paddingTop="10dp"
+        android:background="@color/colorPrimary"
+        android:paddingBottom="10dp"
+        android:layout_height="wrap_content"
+        android:text="LogIn">
+    </Button>
+
+    <Button
+        android:id="@+id/btn_next_screen_relative"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:textSize="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/btn_login_relative"
+        android:layout_width="wrap_content"
+        android:text="New user? Register Here"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btn_next_screen_relative"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/camera"
+            android:text="Open Camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/gallery"
+            android:text="Open Gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

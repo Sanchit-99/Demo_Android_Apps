@@ -9,17 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".contacts_fetch">
-
-        </activity>
-        <activity android:name=".Splash">
+        <activity android:name=".videoRecord">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Recyclerview"></activity>
+        <activity android:name=".contacts_fetch"></activity>
+        <activity android:name=".Splash">
+
+        </activity>
+        <activity android:name=".Recyclerview" />
         <activity android:name=".list_custom" />
         <activity android:name=".ScrollView" />
         <activity android:name=".Swipe" />
@@ -34,13 +35,15 @@
         <activity android:name=".MainActivity2" />
         <activity android:name=".MainActivity" />
     </application>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 </manifest>
